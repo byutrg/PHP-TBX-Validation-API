@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Dialects" table="dialects">
+    <indexes>
+      <index name="name_2" columns="name"/>
+    </indexes>
+    <unique-constraints>
+      <unique-constraint name="name" columns="name"/>
+    </unique-constraints>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="64" nullable="false"/>
+    <field name="definition" type="text" column="definition" length="65535" nullable="false"/>
+    <field name="dcaRng" type="text" column="dca_rng" length="65535" nullable="false"/>
+    <field name="dcaSch" type="text" column="dca_sch" length="65535" nullable="false"/>
+    <field name="dctNvdl" type="text" column="dct_nvdl" length="65535" nullable="false"/>
+    <field name="dctSch" type="text" column="dct_sch" length="65535" nullable="false"/>
+    <many-to-many target-entity="Modules" field="modules"/>
+  </entity>
+</doctrine-mapping>
