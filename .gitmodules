@@ -1,0 +1,3 @@
+[submodule "src/AppBundle/Resources/data"]
+	path = src/AppBundle/Resources/data
+	url = https://github.com/byutrg/sql-tbx_validation_api_data.git

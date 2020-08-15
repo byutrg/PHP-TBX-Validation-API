@@ -29,6 +29,13 @@ The following routes are available:
 Installation
 ------------
 
+Update submodules:
+
+```
+$ git submodule init
+$ git submodule update
+```
+
 Create an SQL database (The default name is 'tbx_validation_api').  Import the SQL file in "src/AppBundle/Resources/data/tbx_validation_api.sql".
 
 Clone this repository into the appropriate directory on your webserver.
